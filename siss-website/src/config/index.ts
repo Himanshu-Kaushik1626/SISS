@@ -44,13 +44,10 @@ export const CONFIG = {
     { value: 10, suffix: '+', label: 'Years of Experience' },
   ],
 
-  // Social Links (placeholders – update with real URLs)
+  // Social Links
   social: {
-    facebook: '#',
-    instagram: '#',
-    linkedin: '#',
-    twitter: '#',
-    youtube: '#',
+    facebook: 'https://www.facebook.com/share/18LqcDBota/',
+    instagram: 'https://www.instagram.com/sissgroup',
   },
 
   // Logo path

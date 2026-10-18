@@ -56,20 +56,11 @@ export default function Footer() {
             </p>
 
             <div className="footer-social">
-              <a href={CONFIG.social.facebook} aria-label="Facebook">
+              <a href={CONFIG.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <Icon name="facebook" size={18} />
               </a>
-              <a href={CONFIG.social.instagram} aria-label="Instagram">
+              <a href={CONFIG.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Icon name="instagram" size={18} />
-              </a>
-              <a href={CONFIG.social.linkedin} aria-label="LinkedIn">
-                <Icon name="linkedin" size={18} />
-              </a>
-              <a href={CONFIG.social.twitter} aria-label="Twitter">
-                <Icon name="twitter" size={18} />
-              </a>
-              <a href={CONFIG.social.youtube} aria-label="YouTube">
-                <Icon name="youtube" size={18} />
               </a>
             </div>
           </div>
