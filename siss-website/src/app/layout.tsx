@@ -88,8 +88,8 @@ const jsonLd = {
   image: 'https://sissgroup.com/assets/logo-new.png',
   description:
     'Professional security guards, ex-servicemen, armed guards, housekeeping, and facility manpower solutions across India.',
-  telephone: '+919528474547',
-  email: 'info@sissgroup.com',
+  telephone: ['+919528474547', '+917819977334'],
+  email: 'info@sissgroup.in',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'SF 214A, 2nd Floor, Gaur City Center, Sector 4',

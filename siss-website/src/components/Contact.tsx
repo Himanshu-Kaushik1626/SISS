@@ -50,6 +50,9 @@ export default function Contact() {
                   <p>
                     <a href={`tel:${CONFIG.phoneRaw}`}>{CONFIG.phone}</a>
                   </p>
+                  <p style={{ marginTop: '4px' }}>
+                    <a href={`tel:${CONFIG.phoneSecondaryRaw}`}>{CONFIG.phoneSecondary}</a>
+                  </p>
                 </div>
               </div>
 
@@ -67,7 +70,7 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       style={{ color: '#25D366' }}
                     >
-                      +{CONFIG.whatsapp}
+                      {CONFIG.whatsappDisplay}
                     </a>
                   </p>
                 </div>

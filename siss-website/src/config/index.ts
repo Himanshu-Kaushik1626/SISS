@@ -14,11 +14,13 @@ export const CONFIG = {
   brandName: 'SISS Group',
 
   // Contact
-  phone: '9528474547',
-
-  phoneRaw: '9528474547',
-  whatsapp: '9528474547',
-  email: 'info@sissgroup.com',
+  phone: '+91 9528474547',
+  phoneRaw: '+919528474547',
+  phoneSecondary: '+91 7819977334',
+  phoneSecondaryRaw: '+917819977334',
+  whatsapp: '919528474547',
+  whatsappDisplay: '+91 9528474547',
+  email: 'info@sissgroup.in',
 
   // Address
   address:

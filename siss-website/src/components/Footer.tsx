@@ -124,6 +124,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href={`tel:${CONFIG.phoneSecondaryRaw}`}>
+                  <Icon name="phone" size={14} />
+                  <span>{CONFIG.phoneSecondary}</span>
+                </a>
+              </li>
+              <li>
                 <a
                   href={`https://wa.me/${CONFIG.whatsapp}`}
                   target="_blank"
@@ -131,7 +137,7 @@ export default function Footer() {
                   style={{ color: '#25D366' }}
                 >
                   <Icon name="message-circle" size={14} />
-                  <span>+{CONFIG.whatsapp} (WhatsApp)</span>
+                  <span>{CONFIG.whatsappDisplay} (WhatsApp)</span>
                 </a>
               </li>
               <li>
