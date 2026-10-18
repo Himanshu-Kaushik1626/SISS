@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { INDUSTRIES } from '@/config';
 import Icon from './Icon';
 
@@ -10,13 +11,13 @@ export default function Industries() {
         <div className="section-header reveal">
           <span className="section-badge">
             <Icon name="building" size={14} />
-            Industries
+            Industries We Serve
           </span>
           <h2 className="section-title">
-            Industries We <span className="highlight">Serve</span>
+            Tailored Security for <span className="highlight">Every Industry</span>
           </h2>
           <p className="section-subtitle">
-            Delivering specialized security and manpower across diverse sectors.
+            Delivering specialized, licensed, and trained security and manpower deployments across key sectors in India.
           </p>
         </div>
 
@@ -25,13 +26,25 @@ export default function Industries() {
             <div
               key={i}
               className="industry-card glass-card reveal"
-              style={{ transitionDelay: `${i * 0.06}s` }}
+              style={{ transitionDelay: `${i * 0.05}s` }}
             >
-              <div className="industry-card-icon">
-                <Icon name={ind.icon} size={28} />
+              <div className="industry-card-img-wrap">
+                <Image
+                  src={ind.image}
+                  alt={ind.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="industry-card-img"
+                />
+                <div className="industry-card-overlay" />
+                <div className="industry-card-badge">
+                  <Icon name={ind.icon} size={18} />
+                </div>
               </div>
-              <h4>{ind.name}</h4>
-              <p>{ind.description}</p>
+              <div className="industry-card-body">
+                <h4>{ind.name}</h4>
+                <p>{ind.description}</p>
+              </div>
             </div>
           ))}
         </div>

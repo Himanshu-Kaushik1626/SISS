@@ -146,7 +146,12 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <p>&copy; 2026 {CONFIG.companyName}. All rights reserved.</p>
+          <p>&copy; 2026 {CONFIG.companyName} ({CONFIG.brandName}). All rights reserved.</p>
+          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+            <a href="/privacy" style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Privacy Policy</a>
+            <span style={{ color: 'var(--text-muted)' }}>•</span>
+            <a href="/terms" style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Terms &amp; Conditions</a>
+          </div>
           <p style={{ color: 'var(--text-muted)' }}>{CONFIG.tagline}</p>
         </div>
       </div>

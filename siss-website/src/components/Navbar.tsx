@@ -97,8 +97,8 @@ export default function Navbar() {
               <div className="navbar-logo-text">{CONFIG.shortName}</div>
             )}
             <div className="navbar-brand">
-              {CONFIG.shortName}
-              <span>Security &amp; Manpower</span>
+              {CONFIG.shortName} <span className="navbar-brand-gold">Group</span>
+              <span>Security &amp; Manpower Services</span>
             </div>
           </a>
 

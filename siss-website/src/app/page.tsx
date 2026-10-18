@@ -6,13 +6,13 @@ import WelcomeModal from '@/components/WelcomeModal';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
+import BookingForm from '@/components/BookingForm';
 import About from '@/components/About';
 import Services from '@/components/Services';
 import Industries from '@/components/Industries';
 import Process from '@/components/Process';
 import Training from '@/components/Training';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import BookingForm from '@/components/BookingForm';
 import CareersForm from '@/components/CareersForm';
 import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
@@ -64,45 +64,44 @@ export default function Home() {
         <Hero />
         <TrustBar />
 
-        {/* 4. Sections in exact requested order */}
-        {/* a) About Us with animated stat counters */}
-        <About />
-
-        {/* b) Our Services with category tabs & booking pre-selection */}
-        <Services />
-
-        {/* c) Industries We Serve */}
-        <Industries />
-
-        {/* d) 6-step Process Timeline */}
-        <Process />
-
-        {/* e) Training & Quality */}
-        <Training />
-
-        {/* f) Why Choose SISS */}
-        <WhyChooseUs />
-
-        {/* g) Book a Service Form */}
+        {/* ★ Booking / Query Form moved to top for better conversions */}
         <BookingForm />
 
-        {/* h) Careers / Join Us Form */}
+        {/* About Us with animated stat counters */}
+        <About />
+
+        {/* Our Services with category tabs & booking pre-selection */}
+        <Services />
+
+        {/* Industries We Serve */}
+        <Industries />
+
+        {/* 6-step Process Timeline */}
+        <Process />
+
+        {/* Training & Quality */}
+        <Training />
+
+        {/* Why Choose SISS */}
+        <WhyChooseUs />
+
+        {/* Careers / Join Us Form */}
         <CareersForm />
 
-        {/* i) Testimonials Carousel */}
+        {/* Testimonials Carousel */}
         <Testimonials />
 
-        {/* j) FAQ Accordion */}
+        {/* FAQ Accordion */}
         <Faq />
 
-        {/* k) Contact with Google Map */}
+        {/* Contact with Google Map */}
         <Contact />
       </main>
 
-      {/* l) Footer */}
+      {/* Footer */}
       <Footer />
 
-      {/* 7. Floating WhatsApp, Call, Back-to-top & Mobile Bottom Bar */}
+      {/* Floating WhatsApp, Call, Back-to-top & Mobile Bottom Bar */}
       <FloatingElements />
     </>
   );

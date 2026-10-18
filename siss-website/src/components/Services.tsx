@@ -1,13 +1,14 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import Image from 'next/image';
 import { SERVICES, ServiceCategory } from '@/config';
 import Icon from './Icon';
 
 type FilterType = 'all' | ServiceCategory;
 
 const filters: { label: string; value: FilterType }[] = [
-  { label: 'All', value: 'all' },
+  { label: 'All Services', value: 'all' },
   { label: 'Security', value: 'security' },
   { label: 'Manpower', value: 'manpower' },
   { label: 'Facility', value: 'facility' },
@@ -97,22 +98,37 @@ export default function Services() {
                 animating ? 'service-card-exit' : 'service-card-enter'
               }`}
               style={{
-                animationDelay: `${i * 0.05}s`,
+                animationDelay: `${i * 0.04}s`,
                 ['--i' as string]: i,
               }}
             >
-              <div className="service-card-icon">
-                <Icon name={service.icon} size={26} />
+              <div className="service-card-img-wrap">
+                <Image
+                  src={service.image}
+                  alt={service.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="service-card-img"
+                />
+                <div className="service-card-overlay" />
+                <div className="service-card-badge">
+                  <Icon name={service.icon} size={18} />
+                </div>
               </div>
-              <h3>{service.name}</h3>
-              <p>{service.description}</p>
-              <button
-                className="btn btn-outline btn-sm"
-                onClick={() => handleBookNow(service.name)}
-              >
-                Book Now
-                <Icon name="arrow-right" size={14} />
-              </button>
+
+              <div className="service-card-body">
+                <h3>{service.name}</h3>
+                <p>{service.description}</p>
+                <div className="service-card-footer">
+                  <button
+                    className="btn btn-outline btn-sm"
+                    onClick={() => handleBookNow(service.name)}
+                  >
+                    Book Now
+                    <Icon name="arrow-right" size={14} />
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
         </div>

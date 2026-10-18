@@ -1198,11 +1198,15 @@ h4 { font-size: var(--fs-lg); }
 }
 
 .service-card {
-  padding: var(--space-xl);
+  padding: 0;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--glass-bg);
+  transition: all var(--transition-base);
 }
 
 .service-card::before {
@@ -1214,6 +1218,7 @@ h4 { font-size: var(--fs-lg); }
   height: 3px;
   background: linear-gradient(90deg, var(--royal-blue), var(--gold));
   opacity: 0;
+  z-index: 5;
   transition: opacity var(--transition-base);
 }
 
@@ -1221,32 +1226,88 @@ h4 { font-size: var(--fs-lg); }
   opacity: 1;
 }
 
-.service-card-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(21, 101, 216, 0.15), rgba(212, 175, 55, 0.1));
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.service-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: #07162b;
+}
+
+.service-card-img {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.service-card:hover .service-card-img {
+  transform: scale(1.08);
+}
+
+.service-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 22, 43, 0.15) 0%,
+    rgba(7, 22, 43, 0.35) 50%,
+    rgba(7, 22, 43, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.service-card-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: rgba(7, 22, 43, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--royal-blue-light);
-  font-size: 1.4rem;
-  margin-bottom: var(--space-lg);
-  transition: all var(--transition-base);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  transition: all var(--transition-fast);
 }
 
-.service-card:hover .service-card-icon {
-  background: linear-gradient(135deg, rgba(21, 101, 216, 0.25), rgba(212, 175, 55, 0.2));
+.service-card:hover .service-card-badge {
+  background: var(--gold);
+  color: var(--navy-deep);
   transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
-.service-card h3 {
-  font-size: var(--fs-base);
+.service-card-body {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-card-body h3 {
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: var(--space-sm);
+  color: #fff;
+  margin-bottom: var(--space-xs);
+  transition: color var(--transition-fast);
 }
 
-.service-card p {
+.service-card:hover .service-card-body h3 {
+  color: var(--gold-light);
+}
+
+.service-card-body p {
   color: var(--text-secondary);
   font-size: var(--fs-sm);
   line-height: 1.6;
@@ -1254,51 +1315,121 @@ h4 { font-size: var(--fs-lg); }
   margin-bottom: var(--space-lg);
 }
 
-.service-card .btn {
-  align-self: flex-start;
+.service-card-footer {
+  margin-top: auto;
+}
+
+.service-card-footer .btn {
+  width: 100%;
+  justify-content: space-between;
 }
 
 /* ---------- Industries ---------- */
 .industries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-xl);
 }
 
 .industry-card {
-  padding: var(--space-xl);
-  text-align: center;
-  cursor: default;
-}
-
-.industry-card-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, rgba(21, 101, 216, 0.12), rgba(212, 175, 55, 0.08));
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--space-md);
-  color: var(--gold);
-  font-size: 1.5rem;
+  flex-direction: column;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--glass-bg);
   transition: all var(--transition-base);
 }
 
-.industry-card:hover .industry-card-icon {
-  transform: scale(1.1) rotate(5deg);
-  background: linear-gradient(135deg, rgba(21, 101, 216, 0.2), rgba(212, 175, 55, 0.15));
+.industry-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.15);
 }
 
-.industry-card h4 {
-  font-size: var(--fs-base);
-  margin-bottom: var(--space-sm);
+.industry-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #07162b;
 }
 
-.industry-card p {
+.industry-card-img {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.industry-card:hover .industry-card-img {
+  transform: scale(1.08);
+}
+
+.industry-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 22, 43, 0.1) 0%,
+    rgba(7, 22, 43, 0.3) 50%,
+    rgba(7, 22, 43, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.industry-card-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: rgba(7, 22, 43, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  transition: all var(--transition-fast);
+}
+
+.industry-card:hover .industry-card-badge {
+  background: var(--gold);
+  color: var(--navy-deep);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.industry-card-body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.industry-card-body h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: var(--space-xs);
+  transition: color var(--transition-fast);
+}
+
+.industry-card:hover .industry-card-body h4 {
+  color: var(--gold-light);
+}
+
+.industry-card-body p {
   color: var(--text-secondary);
   font-size: var(--fs-sm);
-  line-height: 1.5;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ---------- Process Timeline ---------- */

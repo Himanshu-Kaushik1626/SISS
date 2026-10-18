@@ -189,7 +189,7 @@ export default function BookingForm() {
   }
 
   return (
-    <section id="booking" className="section form-section">
+    <section id="booking" className="section form-section" style={{ paddingTop: 'var(--space-2xl)', paddingBottom: 'var(--space-3xl)' }}>
       <div
         className="glow-blob glow-blob-blue"
         style={{ width: 350, height: 350, bottom: '10%', right: '-5%' }}
@@ -197,15 +197,14 @@ export default function BookingForm() {
       <div className="container">
         <div className="section-header reveal">
           <span className="section-badge">
-            <Icon name="send" size={14} />
-            Book a Service
+            <Icon name="shield-check" size={14} />
+            Quick Service Inquiry &amp; Instant Quote
           </span>
           <h2 className="section-title">
-            Get a <span className="highlight">Free Quote</span>
+            Book Security &amp; Manpower – <span className="highlight">Get Free Quote</span>
           </h2>
           <p className="section-subtitle">
-            Fill in your requirements and we&apos;ll respond within hours via
-            WhatsApp.
+            Trusted by 500+ Clients &bull; 7,000+ Verified Staff &bull; Deployment across 35+ Cities
           </p>
         </div>
 
@@ -479,11 +478,13 @@ export default function BookingForm() {
                 className={`btn btn-primary btn-lg ${loading ? 'btn-loading' : ''}`}
                 disabled={loading}
               >
-                {loading ? 'Sending...' : 'Send to WhatsApp'}
+                {loading ? 'Sending...' : 'Send Inquiry to WhatsApp'}
                 {!loading && <Icon name="whatsapp" size={18} />}
               </button>
-              <p style={{ color: 'var(--text-muted)', fontSize: 'var(--fs-xs)' }}>
-                Your details will be sent via WhatsApp for a quick response.
+              <p style={{ color: 'var(--text-muted)', fontSize: 'var(--fs-xs)', textAlign: 'center', marginTop: 'var(--space-xs)' }}>
+                🔒 100% Privacy Protected. By submitting, you agree to our{' '}
+                <a href="/privacy" style={{ color: 'var(--gold)', textDecoration: 'underline' }}>Privacy Policy</a> and{' '}
+                <a href="/terms" style={{ color: 'var(--gold)', textDecoration: 'underline' }}>Terms</a>.
               </p>
             </div>
           </form>

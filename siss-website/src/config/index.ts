@@ -11,13 +11,14 @@ export const CONFIG = {
   shortName: 'SISS',
   tagline: 'Professional Security for a Safer Tomorrow',
   taglineAlt: 'A Safer Today, A Better Tomorrow',
+  brandName: 'SISS Group',
 
   // Contact
   phone: '9528474547',
 
   phoneRaw: '9528474547',
   whatsapp: '9528474547',
-  email: 'info@shivaysecuritas.com',
+  email: 'info@sissgroup.com',
 
   // Address
   address:
@@ -31,10 +32,10 @@ export const CONFIG = {
 
   // Stats (animated counters)
   stats: [
-    { value: 100, suffix: '+', label: 'Happy Clients' },
-    { value: 2000, suffix: '+', label: 'Trained Staff' },
+    { value: 500, suffix: '+', label: 'Happy Clients' },
+    { value: 7000, suffix: '+', label: 'Skilled Workers' },
     { value: 35, suffix: '+', label: 'Cities Served' },
-    { value: 5, suffix: '+', label: 'Years of Experience' },
+    { value: 10, suffix: '+', label: 'Years of Experience' },
   ],
 
   // Social Links (placeholders – update with real URLs)
@@ -47,7 +48,7 @@ export const CONFIG = {
   },
 
   // Logo path
-  logoPath: '/assets/logo.png',
+  logoPath: '/assets/logo-new.png',
 
   // WhatsApp prefilled greeting
   whatsappGreeting:
@@ -65,6 +66,7 @@ export interface ServiceItem {
   description: string;
   icon: string;
   category: ServiceCategory;
+  image: string;
 }
 
 export const SERVICES: ServiceItem[] = [
@@ -76,6 +78,7 @@ export const SERVICES: ServiceItem[] = [
       'Trained and uniformed security personnel for premises protection, access control and surveillance.',
     icon: 'shield',
     category: 'security',
+    image: '/assets/services/security-guards_v2.jpg',
   },
   {
     id: 'ex-servicemen-security',
@@ -84,6 +87,7 @@ export const SERVICES: ServiceItem[] = [
       'Disciplined ex-defence personnel bringing military-grade vigilance and professionalism.',
     icon: 'medal',
     category: 'security',
+    image: '/assets/services/ex-servicemen-security_v2.jpg',
   },
   {
     id: 'armed-guard',
@@ -92,6 +96,7 @@ export const SERVICES: ServiceItem[] = [
       'Licensed armed security for high-risk environments, subject to applicable laws and licensing requirements.',
     icon: 'target',
     category: 'security',
+    image: '/assets/services/armed-guard_v2.jpg',
   },
   {
     id: 'lady-security',
@@ -100,6 +105,7 @@ export const SERVICES: ServiceItem[] = [
       'Trained female security officers for women-focused environments, events and access checkpoints.',
     icon: 'user-check',
     category: 'security',
+    image: '/assets/services/lady-security_v2.jpg',
   },
   {
     id: 'bouncers',
@@ -108,6 +114,7 @@ export const SERVICES: ServiceItem[] = [
       'Physically trained personnel for crowd management, event security and access control.',
     icon: 'users',
     category: 'security',
+    image: '/assets/services/bouncers_v2.jpg',
   },
   {
     id: 'security-supervisor',
@@ -116,6 +123,7 @@ export const SERVICES: ServiceItem[] = [
       'Experienced supervisors for team management, shift coordination and on-site reporting.',
     icon: 'clipboard-check',
     category: 'security',
+    image: '/assets/services/security-supervisor.jpg',
   },
   {
     id: 'personal-security',
@@ -124,6 +132,7 @@ export const SERVICES: ServiceItem[] = [
       'Close protection officers (PSOs) for individuals, executives and VIPs.',
     icon: 'user-shield',
     category: 'security',
+    image: '/assets/services/personal-security_v2.jpg',
   },
   {
     id: 'event-security',
@@ -132,6 +141,7 @@ export const SERVICES: ServiceItem[] = [
       'Comprehensive security planning and deployment for events, exhibitions and gatherings.',
     icon: 'calendar-check',
     category: 'security',
+    image: '/assets/services/event-security.jpg',
   },
   {
     id: 'residential-security',
@@ -140,6 +150,7 @@ export const SERVICES: ServiceItem[] = [
       'Round-the-clock security for housing societies, gated communities and residential complexes.',
     icon: 'home',
     category: 'security',
+    image: '/assets/services/residential-security_v2.jpg',
   },
   {
     id: 'industrial-security',
@@ -148,6 +159,7 @@ export const SERVICES: ServiceItem[] = [
       'Specialized security for factories, warehouses, plants and manufacturing units.',
     icon: 'factory',
     category: 'security',
+    image: '/assets/services/industrial-security.jpg',
   },
   // Manpower
   {
@@ -157,6 +169,7 @@ export const SERVICES: ServiceItem[] = [
       'Trained housekeeping personnel for offices, hospitals, hotels and residential complexes.',
     icon: 'sparkles',
     category: 'manpower',
+    image: '/assets/services/housekeeping-staff.jpg',
   },
   {
     id: 'helper-peon',
@@ -165,6 +178,7 @@ export const SERVICES: ServiceItem[] = [
       'General office helpers, peons and support staff for day-to-day operations.',
     icon: 'hand-helping',
     category: 'manpower',
+    image: '/assets/services/helper-peon.jpg',
   },
   {
     id: 'skilled-workers',
@@ -173,6 +187,7 @@ export const SERVICES: ServiceItem[] = [
       'Electricians, plumbers, technicians and other skilled tradespeople for facility needs.',
     icon: 'wrench',
     category: 'manpower',
+    image: '/assets/services/skilled-workers.jpg',
   },
   {
     id: 'unskilled-workers',
@@ -181,6 +196,7 @@ export const SERVICES: ServiceItem[] = [
       'General labour for loading, cleaning, construction support and miscellaneous tasks.',
     icon: 'hard-hat',
     category: 'manpower',
+    image: '/assets/services/unskilled-workers.jpg',
   },
   {
     id: 'facility-management',
@@ -189,6 +205,7 @@ export const SERVICES: ServiceItem[] = [
       'Complete facility management teams for building operations and maintenance.',
     icon: 'building',
     category: 'facility',
+    image: '/assets/services/facility-management.jpg',
   },
   {
     id: 'nurse-staff',
@@ -197,6 +214,7 @@ export const SERVICES: ServiceItem[] = [
       'Qualified nursing staff for hospitals, clinics, corporate offices and elderly care.',
     icon: 'heart-pulse',
     category: 'manpower',
+    image: '/assets/services/nurse-staff.jpg',
   },
   {
     id: 'office-support',
@@ -205,6 +223,7 @@ export const SERVICES: ServiceItem[] = [
       'Receptionists, front-desk personnel, data-entry operators and administrative support.',
     icon: 'briefcase',
     category: 'manpower',
+    image: '/assets/services/office-support.jpg',
   },
   {
     id: 'petrol-pump-manpower',
@@ -213,6 +232,7 @@ export const SERVICES: ServiceItem[] = [
       'Trained fuel station attendants with safety awareness and customer service skills.',
     icon: 'fuel',
     category: 'manpower',
+    image: '/assets/services/petrol-pump-manpower.jpg',
   },
   {
     id: 'custom-manpower',
@@ -221,6 +241,7 @@ export const SERVICES: ServiceItem[] = [
       'Tailored manpower solutions designed around your specific staffing requirements.',
     icon: 'settings',
     category: 'manpower',
+    image: '/assets/services/custom-manpower.jpg',
   },
 ];
 
@@ -231,6 +252,7 @@ export interface IndustryItem {
   name: string;
   description: string;
   icon: string;
+  image: string;
 }
 
 export const INDUSTRIES: IndustryItem[] = [
@@ -239,51 +261,61 @@ export const INDUSTRIES: IndustryItem[] = [
     description:
       'Gated communities, housing complexes and apartment security.',
     icon: 'home',
+    image: '/assets/industries/residential.jpg',
   },
   {
     name: 'Corporate Offices',
     description: 'Front-desk security, access control and surveillance.',
     icon: 'building-2',
+    image: '/assets/industries/corporate.jpg',
   },
   {
     name: 'Factories & Industries',
     description: 'Perimeter security, gate management and shift-based guarding.',
     icon: 'factory',
+    image: '/assets/industries/factory.jpg',
   },
   {
     name: 'Hospitals & Healthcare',
     description: 'Patient-safe security, nursing and housekeeping staff.',
     icon: 'hospital',
+    image: '/assets/industries/hospital.jpg',
   },
   {
     name: 'Schools & Colleges',
     description: 'Campus safety, visitor management and event security.',
     icon: 'graduation-cap',
+    image: '/assets/industries/education.jpg',
   },
   {
     name: 'Malls & Showrooms',
     description: 'Floor security, crowd management and theft prevention.',
     icon: 'shopping-bag',
+    image: '/assets/industries/mall.jpg',
   },
   {
     name: 'Hotels & Hospitality',
     description: 'Guest safety, concierge security and housekeeping.',
     icon: 'hotel',
+    image: '/assets/industries/hotel.jpg',
   },
   {
     name: 'Petrol Pumps',
     description: 'Trained attendants with safety protocols and customer care.',
     icon: 'fuel',
+    image: '/assets/industries/petrol-station.jpg',
   },
   {
     name: 'Warehouses',
     description: 'Inventory protection, access control and night patrolling.',
     icon: 'warehouse',
+    image: '/assets/industries/warehouse.jpg',
   },
   {
     name: 'Construction Sites',
     description: 'Material security, entry management and worker safety.',
     icon: 'hard-hat',
+    image: '/assets/industries/construction.jpg',
   },
 ];
 
