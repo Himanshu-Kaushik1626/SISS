@@ -47,12 +47,13 @@ export default function Contact() {
                 </div>
                 <div className="contact-item-text">
                   <h4>Call Us</h4>
-                  <p>
-                    <a href={`tel:${CONFIG.phoneRaw}`}>{CONFIG.phone}</a>
-                  </p>
-                  <p style={{ marginTop: '4px' }}>
-                    <a href={`tel:${CONFIG.phoneSecondaryRaw}`}>{CONFIG.phoneSecondary}</a>
-                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                    {CONFIG.phones.map((p, i) => (
+                      <p key={i}>
+                        <a href={`tel:${p.raw}`}>{p.display}</a>
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
 

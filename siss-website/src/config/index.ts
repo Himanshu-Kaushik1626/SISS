@@ -16,8 +16,12 @@ export const CONFIG = {
   // Contact
   phone: '+91 9528474547',
   phoneRaw: '+919528474547',
-  phoneSecondary: '+91 7819977334',
-  phoneSecondaryRaw: '+917819977334',
+  phones: [
+    { display: '+91 9528474547', raw: '+919528474547' },
+    { display: '+91 7819977334', raw: '+917819977334' },
+    { display: '+91 9675892177', raw: '+919675892177' },
+    { display: '+91 9634055001', raw: '+919634055001' },
+  ],
   whatsapp: '919528474547',
   whatsappDisplay: '+91 9528474547',
   email: 'info@sissgroup.in',

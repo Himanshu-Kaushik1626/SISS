@@ -117,18 +117,14 @@ export default function Footer() {
               <li style={{ color: 'var(--text-secondary)', fontSize: 'var(--fs-sm)', lineHeight: 1.6, marginBottom: 'var(--space-md)' }}>
                 {CONFIG.address}
               </li>
-              <li>
-                <a href={`tel:${CONFIG.phoneRaw}`}>
-                  <Icon name="phone" size={14} />
-                  <span>{CONFIG.phone}</span>
-                </a>
-              </li>
-              <li>
-                <a href={`tel:${CONFIG.phoneSecondaryRaw}`}>
-                  <Icon name="phone" size={14} />
-                  <span>{CONFIG.phoneSecondary}</span>
-                </a>
-              </li>
+              {CONFIG.phones.map((p, i) => (
+                <li key={i}>
+                  <a href={`tel:${p.raw}`}>
+                    <Icon name="phone" size={14} />
+                    <span>{p.display}</span>
+                  </a>
+                </li>
+              ))}
               <li>
                 <a
                   href={`https://wa.me/${CONFIG.whatsapp}`}
